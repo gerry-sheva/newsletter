@@ -1,0 +1,9 @@
+services:
+  app:
+      build: .
+      container_name: newsletter
+      volumes:
+        - .:/app
+      command: sh -c "cargo watch -x run"
+      ports:
+        - "8000:8000"
